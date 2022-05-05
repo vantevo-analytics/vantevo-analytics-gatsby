@@ -1,6 +1,6 @@
 {
   "name": "vantevo-analytics-gatsby",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "Official plugin Vantevo Analytics for Gatsby.",
   "scripts": {
     "build": "babel src --out-dir . --ignore __tests__",

@@ -8,13 +8,13 @@ const React = require("react");
 
 const defaultOptions = {
   "excludePath": [],
-  "dev": true,
-  "hash": true,
+  "dev": false,
+  "hash": false,
   "domain": null,
-  "manualPageview": true,
-  "outboundLinks": true,
+  "manualPageview": false,
+  "outboundLinks": false,
   "trackFiles": null,
-  "saveExtesion": false,
+  "saveExtension": false,
   "scrScript": "https://vantevo.io/js/vantevo.js",
   "params": {}
 };
@@ -22,7 +22,7 @@ const defaultOptions = {
 const addHeaderComponent = (setHeadComponents, scriptProps) => {
   return setHeadComponents([/*#__PURE__*/React.createElement("script", (0, _extends2.default)({
     key: "gatsby-plugin-vantevo-analytics",
-    id: "gatsby-vantevo"
+    id: "vantevo-analytics"
   }, scriptProps)), /*#__PURE__*/React.createElement("script", {
     key: "gatsby-plugin-vantevo-analytics-custom",
     dangerouslySetInnerHTML: {
@@ -79,7 +79,7 @@ exports.onRenderBody = ({
     scriptProps["data-param-track-files"] = trackFiles;
   }
 
-  if (saveExtesion === true) {
+  if (saveExtesionFiles === true) {
     scriptProps["data-param-save-extension"] = true;
   }
 

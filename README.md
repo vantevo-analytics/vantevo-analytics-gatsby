@@ -4,6 +4,7 @@
  
 For more information visit the website [vantevo.io](https://vantevo.io).
 
+Official plugin Vantevo Analytics for Gatsby.
 
 ## Installation
  

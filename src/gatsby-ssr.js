@@ -2,13 +2,13 @@ const React = require("react");
 
 const defaultOptions = {
   "excludePath": [],
-  "dev": true,
-  "hash": true,
+  "dev": false,
+  "hash": false,
   "domain": null,
-  "manualPageview": true,
-  "outboundLinks": true,
+  "manualPageview": false,
+  "outboundLinks": false,
   "trackFiles": null,
-  "saveExtesion": false,
+  "saveExtension": false,
   "scrScript": "https://vantevo.io/js/vantevo.js",
   "params": {}
 };
@@ -62,7 +62,7 @@ exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
     scriptProps["data-param-track-files"] = trackFiles;
   }
 
-  if (saveExtesion === true) {
+  if (saveExtesionFiles === true) {
     scriptProps["data-param-save-extension"] = true;
   }
 
