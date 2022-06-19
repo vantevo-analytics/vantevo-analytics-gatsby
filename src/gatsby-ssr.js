@@ -8,7 +8,7 @@ const defaultOptions = {
   "manualPageview": false,
   "outboundLinks": false,
   "trackFiles": null,
-  "saveExtension": false,
+  "saveExtensionFiles": false,
   "scrScript": "https://vantevo.io/js/vantevo.js",
   "params": {}
 };
@@ -32,7 +32,7 @@ exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
     src: "https://vantevo.io/js/vantevo.js"
   };
   
-  const { excludePath, dev, hash, domain, manualPageview, outboundLinks, trackFiles, saveExtesion, scrScript } = pluginOptions;
+  const { excludePath, dev, hash, domain, manualPageview, outboundLinks, trackFiles, saveExtensionFiles, scrScript } = pluginOptions;
 
   if (scrScript) {
     scriptProps["src"] = scrScript;
@@ -62,7 +62,7 @@ exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
     scriptProps["data-param-track-files"] = trackFiles;
   }
 
-  if (saveExtesionFiles === true) {
+  if (saveExtensionFiles === true) {
     scriptProps["data-param-save-extension"] = true;
   }
 

@@ -14,7 +14,7 @@ const defaultOptions = {
   "manualPageview": false,
   "outboundLinks": false,
   "trackFiles": null,
-  "saveExtension": false,
+  "saveExtensionFiles": false,
   "scrScript": "https://vantevo.io/js/vantevo.js",
   "params": {}
 };
@@ -47,7 +47,7 @@ exports.onRenderBody = ({
     manualPageview,
     outboundLinks,
     trackFiles,
-    saveExtesion,
+    saveExtensionFiles,
     scrScript
   } = pluginOptions;
 
@@ -79,7 +79,7 @@ exports.onRenderBody = ({
     scriptProps["data-param-track-files"] = trackFiles;
   }
 
-  if (saveExtesionFiles === true) {
+  if (saveExtensionFiles === true) {
     scriptProps["data-param-save-extension"] = true;
   }
 
